@@ -1,0 +1,7 @@
+<!-- Lifecycle Hooks in Angular -->
+
+<app-posts-list></app-posts-list>
+
+<!-- In the example below we have loaded the app-posts-list but using the ngComponentOutlet, or programatically. for this we first added the NgComponentOutlet in Imports app.component.ts file and then made the loadComponent() method inside the exports of ts file. and inside that method we just returned the PostsListComponent, which we have already imported inside the ts file there. -->
+
+<div *ngComponentOutlet="loadComponent()" ></div>
