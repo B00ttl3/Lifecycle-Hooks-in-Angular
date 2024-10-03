@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
@@ -27,8 +27,20 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 export class AppComponent {
   title: string = 'This loaded dynamically'
 
-  loadComponent(){
-    return PostsListComponent;
+  constructor (private viewContainer: ViewContainerRef) {
+
   }
+
+  loadComponent() {
+    this.viewContainer.createComponent(PostsListComponent);
+  }
+
+  removeComponent() {
+    this.viewContainer.remove();
+  }
+
+  // loadComponent(){
+  //   return PostsListComponent;
+  // }
 
 }

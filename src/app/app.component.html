@@ -4,4 +4,14 @@
 
 <!-- In the example below we have loaded the app-posts-list but using the ngComponentOutlet, or programatically. for this we first added the NgComponentOutlet in Imports app.component.ts file and then made the loadComponent() method inside the exports of ts file. and inside that method we just returned the PostsListComponent, which we have already imported inside the ts file there. -->
 
-<div *ngComponentOutlet="loadComponent()" ></div>
+<!-- <div *ngComponentOutlet="loadComponent()" ></div> -->
+
+
+<!-- (Creating Component) Render Components. Programtically 2: using bulitin Angular API which is ViewContainerRef. So, in this example what we wanted to do is, we wanted to show the app-posts-list when the button is clicked. So first we made the button, and added the click function on it, and on click we wanted to start the method loadComponent. but to make that button work we first have to make the constructor inside the export ts file, and then we made it private at first with viewContainer : ViewContainerRef is set. Then we made the loadComponent method and inside the {} we asked for viewContainer after this. and then created the creatComponent after . with the component which we wanted to show which is PostsListComponent inside the ()  -->
+
+<button (click)="loadComponent()" >Create Component</button>
+
+
+<!-- Destroying the component, So, by creating the remove button we want to destroy or remove the component which we added by using the upper exampple. so we made the button added the click option and on click we wanted to run the removeComponent method, so we made the removeComponent() method inside the ts file and inside that method we just added the .remove() after the this.viewContainer which means we want to remove the component inside that viewContainer -->
+ 
+<button (click)="removeComponent()" >remove Component</button>
