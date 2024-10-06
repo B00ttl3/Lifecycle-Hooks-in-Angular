@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { NgComponentOutlet, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet } from '@angular/common';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { ProfileComponent } from './profile/profile.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,7 +21,8 @@ import { PostsListComponent } from './posts-list/posts-list.component';
     NgSwitchCase, 
     NgSwitchDefault, 
     PostsListComponent,
-    NgComponentOutlet],
+    NgComponentOutlet,
+    ProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
