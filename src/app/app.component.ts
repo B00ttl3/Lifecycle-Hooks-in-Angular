@@ -29,6 +29,12 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent {
   title: string = 'This loaded dynamically'
 
+  userName: string = "Umair Munir";
+
+  changeUser() {
+    this.userName = "Something New";
+  }
+
   constructor (private viewContainer: ViewContainerRef) {
 
   }

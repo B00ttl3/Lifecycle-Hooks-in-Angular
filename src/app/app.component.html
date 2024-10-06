@@ -19,4 +19,6 @@
 
 <!-- ngOnChange,  -->
 
-<app-profile></app-profile>
+<app-profile [pUserName]="userName" ></app-profile>
+
+<button (click)="changeUser()" >Change user name</button>
