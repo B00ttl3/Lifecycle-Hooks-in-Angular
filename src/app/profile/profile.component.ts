@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +7,11 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent implements OnChanges, OnInit {
+export class ProfileComponent implements OnChanges, OnInit, DoCheck {
 
   @Input() pUserName: string = "";
+
+  counter: number = 0;
 
   constructor() {
     console.log('constructor method is triggered');
@@ -24,5 +26,13 @@ export class ProfileComponent implements OnChanges, OnInit {
   ngOnChanges() {
     console.log('OnChanges Triggered');
   }
+
+  ngDoCheck() {
+    console.log('ngDoCheck triggers');
+  }
+
+  incrementCounter() {
+    this.counter ++;
+  };
 
 }

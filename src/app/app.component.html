@@ -29,4 +29,8 @@
 
 <!-- constructor method: this method work kinda same as ngOnInit. But there is a HUGE difference in it. which is when we use this method not all the things can be displayed inside it, but those things cna be shown inside the ngOnInit method. Because the constructor() method first have to make its separate space inside the computer RAM, which ngOnInit can already have. We mostly use constructor for simple work, where we dont have to access the DOM, and as it is dependent. so we work with it when we need to do some easy work we use it -->
 
-<button>Working button</button>
+<!-- ngDoCheck: called during every change detection run, vigilant guard constantly checking for changes. It can be called frequently, so dont put heavy operators in here. So, almost same as previous hooks first we will import it at the top of our profile's TS file, and then we will add it in exports after puting a , and then we will make the operation using the ngDoCheck() {} inside the @Imports of the profile TS file. This will work whenever we will make a change on web by pressing the Change user name button, as we are changing the username by pressing that button, we are changing the profile and that is why the ngDoCheck will be triggered each time we press the button. as it is also coming from the parent file. -->
+
+<!-- The difference between ngOnChange and ngDoCheck is that the ngDoCheck trigers every time a change occurs, whereas the ngOnChange only get calls when @Input properties get changed. -->
+
+

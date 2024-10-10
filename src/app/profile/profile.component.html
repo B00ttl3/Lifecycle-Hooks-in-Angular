@@ -1,3 +1,9 @@
 <p>profile works!</p>
 
 <h2>{{pUserName}}</h2>
+
+<h1>{{ counter }}</h1>
+
+<button (click)="incrementCounter()" >Increment Counter</button>
+
+<!-- In the example above from code line 5 to 7 we have seen the difference between the ngOnChange hook and ngDoCheck hook. the ngDoCheck hook triggered everytime when we clicked on the Increment counter button, but the ngOnChange only triggered once when we clicked on Change user name button as the user name button changes the @Input property -->
