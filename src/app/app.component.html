@@ -19,9 +19,9 @@
 
 <!-- ngOnChange,  -->
 
-<!-- <app-profile [pUserName]="userName" ></app-profile>
+<!-- <app-profile [pUserName]="userName" ></app-profile> -->
 
-<button (click)="changeUser()" >Change user name</button> -->
+<button (click)="changeUser()" >Change user name</button>
 
 
 <!-- ngOnInit: called once after the component is initialized, meanse everything is ready to move but will move once it is needed to be moved. First we will import OnInit inside the import of profileTS file, and then we will put it inside the export of profileTS file and then will make a method using ngOnInit inside that export or we wont be able to use it -->
@@ -37,7 +37,10 @@
 <!-- ngAfterContentInit: Called once after the component's content has been finalized. Means it will work once the parent component's data is projeted inside the view, then it will trigger. For making it work we will add it same as other hooks inside the profile ts file. and then make a method using the ngAfterContentInit and then we will add the ng-content inside the html file of profile so that it can capture the data from the parent component. use it when you are working with content that have properly been initialized inside the view and we want to rander or change the content -->
 
 <app-profile>
+    <h1>{{ userName }}</h1>
     <p>Content projected from parent</p>
 </app-profile>
 
-<!-- the new ngHook -->
+
+<!-- ngAfterContentChecked() Called after every check of the component's content, It is almost same as ngAfterContentInit life-hook but the key difference is, the ngAfterContentInit can only be called once but this can be called each time a change will occur, SO, if we want to change the things with the passage of time, we can use this. By changing the username we can see that it will trigger each time but not ngAfterContentInit -->
+
