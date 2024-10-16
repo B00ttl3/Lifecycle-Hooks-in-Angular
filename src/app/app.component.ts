@@ -40,7 +40,7 @@ export class AppComponent {
   }
 
   loadComponent() {
-    this.viewContainer.createComponent(PostsListComponent);
+    this.viewContainer.createComponent(ProfileComponent);
   }
 
   removeComponent() {

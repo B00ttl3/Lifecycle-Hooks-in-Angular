@@ -36,13 +36,15 @@
 
 <!-- ngAfterContentInit: Called once after the component's content has been finalized. Means it will work once the parent component's data is projeted inside the view, then it will trigger. For making it work we will add it same as other hooks inside the profile ts file. and then make a method using the ngAfterContentInit and then we will add the ng-content inside the html file of profile so that it can capture the data from the parent component. use it when you are working with content that have properly been initialized inside the view and we want to rander or change the content -->
 
-<app-profile>
+<!-- <app-profile>
     <h1>{{ userName }}</h1>
     <p>Content projected from parent</p>
-</app-profile>
+</app-profile> -->
 
 
 <!-- ngAfterContentChecked() Called after every check of the component's content, It is almost same as ngAfterContentInit life-hook but the key difference is, the ngAfterContentInit can only be called once but this can be called each time a change will occur, SO, if we want to change the things with the passage of time, we can use this. By changing the username we can see that it will trigger each time but not ngAfterContentInit -->
 
 
-<!-- New Hook -->
+<!-- ngAfterViewInit: Called when the component's view has been initialized, It only works once in the lifecycle of component, If we update the view later on, this will not run, So everytime the full view of any cmponent is intalized it will trigger, like in the example below we can see that whenever we click on the button, the full view of profile component's triggers, and whenever that triggers the ngViewInit triggers as well. We can use it whenever we need to interact with our component's view or have to access child components once everything is laoded -->
+
+<button (click)="loadComponent()">Load Profile</button>
