@@ -48,3 +48,6 @@
 <!-- ngAfterViewInit: Called when the component's view has been initialized, It only works once in the lifecycle of component, If we update the view later on, this will not run, So everytime the full view of any cmponent is intalized it will trigger, like in the example below we can see that whenever we click on the button, the full view of profile component's triggers, and whenever that triggers the ngViewInit triggers as well. We can use it whenever we need to interact with our component's view or have to access child components once everything is laoded -->
 
 <button (click)="loadComponent()">Load Profile</button>
+
+
+<!-- ngAfterViewChecked: called when angular have checked every component and its child component for any changes. Triggers everytime Angular checks the views for changes. It does triggers every time the view changes.  -->
